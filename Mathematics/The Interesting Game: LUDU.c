@@ -1,30 +1,33 @@
 #include<stdio.h>
 #include<stdlib.h>
-int main(){
-    int term,*x,sumOdd,sumEven,i;
-    long N,K;
-    x=(int*)malloc(N*sizeof(int));
-    scanf("%d",&term);
-    while(term!=0){
-            sumEven=sumOdd=0;
-        scanf("%ld%ld",&N,&K);
-        for(i=0;i<N;i++){
-            scanf("%d",&x[i]);
+int main()
+{
+    int  t,n,k,num,i,sum1,sum2,check1,check2;
+    scanf("%d",&t) ;
+    while(t--)
+    {
+        sum1 = sum2 = check1 = check2 = 0;
+        scanf("%d%d",&n,&k);
+        for(i = 0 ; i < n ; i++)
+        {
+            scanf("%d",&num) ;
+            if(i%2)
+                sum2 = sum2 + num;
+            else
+                sum1 = sum1 + num;
+            if(check1 == 0 && sum2 >= k)
+                check2 = 1;
+            if(check2 == 0 && sum1 >= k)
+                check1 = 1;
         }
-        for(i=0;i<N-1;i=i+2){
-            sumOdd=sumOdd+x[i];
-            sumEven=sumEven+x[i+1];
-        }
-        if(sumOdd>=K){
+        if(check1)
             printf("Mina Win\n");
-        }
-        else if(sumEven>=K){
+        if(check2)
             printf("Raju Win\n");
-        }
-        else{
+        if(!(check1 || check2))
             printf("Mithu Win\n");
-        }
     }
-    free(x);
-    return 0;
+    return 0 ;
 }
+
+
