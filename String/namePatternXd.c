@@ -34,5 +34,26 @@ int main() {
 
 
 }
+/*Enter something:
+f
+fa
+far
+fard
+fardin
+
+Given String:
+f
+fa
+far
+fard
+fardin
+
+fardin
+fardi
+fard
+far
+fa
+f
+*/
 
 
