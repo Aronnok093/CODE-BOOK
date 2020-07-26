@@ -1,4 +1,6 @@
-n = int(input())
-line = [int(x) for x in input().split()]
-pattern = [i for i in range (1,n+1)]
-print(list(set(pattern) ^ set(line))[0])
+term=int(input())
+li=list(map(int,input().split()))
+new_li=[]
+for i in range(1,term+1):
+    new_li.append(i)
+print(list(set(li) ^ set(new_li))[0])
