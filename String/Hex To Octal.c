@@ -4,7 +4,7 @@
 int main() {
 
   char hex[100];
-  int i,len=0,decimal=0,erge,octal;
+  int i,len=0,decimal=0,erge,octal=0;
   printf("Input Hexadecimal Value:");
   scanf("%s",&hex);
 
