@@ -16,3 +16,4 @@ if abs(ans[-1]-ans1[0])==1:
 else:
     arr=ans+ans1
     print(*arr,)
+    
