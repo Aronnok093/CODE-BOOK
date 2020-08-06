@@ -1,95 +1,95 @@
 #include<stdio.h>
-int main()
-{
-    int a[100],b[100],sum[101];
-    int first=0,second=0,rs=0;
-    int reminder=0,i;
+#include<string.h>
+int main(){
     char num1[100],num2[100];
-    printf("Enter first number: ");
+    int len1,len2,a[100],b[100],i=0,sum[101],carry=0,rs=0;
     scanf("%s",&num1);
-    printf("Enter second number: ");
     scanf("%s",&num2);
-
-    while(num1[first]!='\0')
-    {
-        a[first] = num1[first]-48;
-        first++;
+    len1=strlen(num1);
+    len2=strlen(num2);
+    while(num1[i]!='\0'){
+        a[i]=num1[i]-48;
+        i++;
     }
-    while(num2[second]!='\0')
-    {
-        b[second] = num2[second]-48;
-        second++;
-    }
-
-    if(first>second)
-    {
-        for(i=second-1; i>=0; i--)
-        {
-            first--;
-            sum[rs]=((a[first]+b[i])+reminder)%10;
-            reminder=((a[first]+b[i])+reminder)/10;
-            rs++;
-        }
-        while(first>0)
-        {
-            first--;
-            sum[rs]=(a[first]+reminder)%10;
-            reminder=(a[first]+reminder)/10;
-
-
-        }
-        if(reminder!=0)
-        {
-            rs++;
-            sum[rs]=reminder;
-
-        }
-
-    }
-    else if(second>first)
-    {
-        for(i=first-1; i>=0; i--)
-        {
-            second--;
-            sum[rs]=((b[second]+a[i])+reminder)%10;
-            reminder=((b[second]+a[i])+reminder)/10;
-            rs++;
-        }
-        while(second>0)
-        {
-            second--;
-            sum[rs]=(b[second]+reminder)%10;
-            reminder=(b[second]+reminder)/10;
-
-        }
-        if(reminder!=0)
-        {
-            rs++;
-            sum[rs]=reminder;
-        }
-    }
-    else
-    {
-        for(i=second-1;i>=0;i--)
-        {
-            first--;
-            sum[rs]=((a[first]+b[i])+reminder)%10;
-            reminder=((a[first])+b[i])/10;
-            rs++;
-        }
-        rs--;
-        if(reminder!=0)
-        {
-            rs++;
-            sum[rs]=reminder;
-        }
+    i=0;
+    while(num2[i]!='\0'){
+        b[i]=num2[i]-48;
+        i++;
     }
 
+    if(len1>len2){
 
-    printf("Sum of both number is: ");
-    for(i=rs; i>=0; i--)
-    {
+        len1=len1-1;
+        len2=len2-1;
+
+        for(i=len2;i>=0;i--){
+            sum[rs]=(a[len1]+b[i]+carry)%10;
+            carry=(a[len1]+b[i]+carry)/10;
+            len1--;
+            rs++;
+        }
+
+        while(len1>=0){
+            sum[rs]=(a[len1]+carry)%10;
+            carry=(a[len1]+carry)/10;
+            len1--;
+            rs++;
+        }
+        rs=rs-1;
+
+        if(carry!=0){
+            sum[rs]=carry;
+        }
+
+    }
+    else if(len2>len1){
+
+        len1=len1-1;
+        len2=len2-1;
+
+        for(i=len1;i>=0;i--){
+            sum[rs]=(b[len2]+a[i]+carry)%10;
+            carry=(b[len2]+a[i]+carry)/10;
+            len2--;
+            rs++;
+        }
+
+        while(len2>=0){
+            sum[rs]=(b[len2]+carry)%10;
+            carry=(b[len2]+carry)/10;
+            len2--;
+            rs++;
+        }
+        rs=rs-1;
+
+        if(carry!=0){
+            rs++;
+            sum[rs]=carry;
+        }
+
+    }
+
+    else{
+        len1=len1-1;
+        len2=len2-1;
+
+        for(i=len2;i>=0;i--){
+            sum[rs]=(a[len1]+b[i]+carry)%10;
+            carry=(a[len1]+b[i]+carry)/10;
+            rs++;
+            len1--;
+        }
+        rs=rs-1;
+
+        if(carry!=0){
+            rs++;
+            sum[rs]=carry;
+        }
+
+
+    }
+    for(i=rs;i>=0;i--){
         printf("%d",sum[i]);
     }
-    return 0;
+
 }
