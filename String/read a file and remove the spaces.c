@@ -9,7 +9,7 @@ int main(){
         printf("File Cant Open");
     while(!feof(fs)){
         c=getc(fs);
-        if(c==EOF)
+        if(c==EOF) //dont needed because i used while(!feof(fs)) 
             break;
         if(c!=' ')
             printf("%c",c);
