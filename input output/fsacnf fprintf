@@ -1,0 +1,3 @@
+while((fscanf(fp,"%d%s%f",&roll,name,&marks))!=EOF)           
+                  printf("\n%d\t%s\t%f",roll,name,marks);
+ fprintf(fp,"%d%s%f",roll,name,marks);
