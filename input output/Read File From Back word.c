@@ -10,7 +10,7 @@ int main(){
         printf("Cant Open");
     }
 
-    fseek(fs,0,SEEK_END);
+    fseek(fs,1,SEEK_END);
     ps=ftell(fs);
 
     while(i!=ps){
