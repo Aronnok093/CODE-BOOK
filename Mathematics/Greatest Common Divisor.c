@@ -1,4 +1,11 @@
 #include <stdio.h>
+/* while(b!=0)
+    {
+        temp = b;
+        b = a%b;   /// fast way to find gcd;
+        a = temp;
+    }
+    return a; */
 
 int main(void) {
   int x,y,i,gcd;
