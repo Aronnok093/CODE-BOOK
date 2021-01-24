@@ -1,0 +1,15 @@
+#define maxi 10000000
+vector<int>arr;
+vector<bool>arr1(maxi+2,0);
+
+void GP(){
+    arr1[0]=true;
+    arr1[1]=true;
+    for(int i=2;i<=maxi;i++){
+        if(arr1[i]==false){
+            arr.push_back(i);
+        for(int j=i*2;j<=maxi;j+=i)
+            arr1[j]=true;
+        }
+    }
+}
