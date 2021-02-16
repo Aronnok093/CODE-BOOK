@@ -38,7 +38,7 @@ int main(){
     }
     int index=distance(arr.begin(),it1);
     int index1=distance(arr.begin(),it2);
-    cout<<"Lower Bound index "<<index<<endl;
+    cout<<"Lower Bound index "<<index<<endl;                   //Complexity: O(logn)
     cout<<"Upper Bound index "<<index1<<endl;
     for(int i=index;;i++)
         if(arr[i]!=3)
