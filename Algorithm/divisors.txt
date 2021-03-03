@@ -1,0 +1,11 @@
+void divisors()
+{
+    int i, j;
+    for(i=1; i<=500002; i++)
+    {
+        for(j=i; j<=500002; j+=i)
+        {
+            d[j].push_back(i);
+        }
+    }
+}
