@@ -1,0 +1,16 @@
+int p[10000009];
+long long res[10000009];
+void GP_memory(){
+        for(int i=2;i<=10000000;i++)
+        {
+            if(!p[i])
+                        {
+                for(int j=i+i;j<=10000000;j+=i)
+                    if(!p[j])
+                    p[j]=i;
+                    res[i]=res[i-1]+i;
+            }
+        else
+            res[i]=res[i-1]+p[i];
+    }
+}
