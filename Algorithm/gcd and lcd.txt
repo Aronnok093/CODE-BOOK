@@ -1,0 +1,5 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+__gcd(i,j)               complexity  O(log10A+log10B)  built in function __gcd();
+lcd = (i,j)/__gcd(i,j)   
