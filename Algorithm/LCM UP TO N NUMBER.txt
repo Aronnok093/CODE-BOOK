@@ -1,0 +1,9 @@
+vector<ll>arr;
+void ans(){
+    int len = arr.size();
+    ll lcm=arr[0];
+    for(int i=1;i<len;i++){
+        lcm=(arr[i]*lcm)/__gcd(arr[i],lcm);
+    }
+    cout<<lcm<<endl;
+}
