@@ -1,0 +1,40 @@
+Author: MD.Fardin Jaman Aranyak
+AUST CSE 44 batch 
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct student
+{
+   char Name[50];
+    int ID;
+    int BatchNo;
+    int Age;
+    char BloodGroup[10];
+    int Year;
+    int Semester;
+};
+
+int main ()
+{
+    FILE *copy,*past;
+    struct student input;
+
+    copy = fopen ("copy.dat", "r");
+     past  = fopen ("past.dat", "w");
+    if (copy == NULL)
+    {
+        fprintf(stderr, "\nError opening file\n");
+        exit (1);
+    }
+
+   
+    while(fread(&input, sizeof(struct person), 1, copy )){
+        printf ("%s %d %d %d %s %d %d", input.Name,input.ID,input. BatchNo,input. Age,input.BloodGroup,input.Year,input.Semester);
+        fwrite (&input, sizeof(struct person), 1, past   );
+    }
+    
+    fclose (copy);
+    fclose(past);
+    return 0;
+}
