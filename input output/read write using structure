@@ -29,9 +29,9 @@ int main ()
     }
 
    
-    while(fread(&input, sizeof(struct person), 1, copy )){
+    while(fread(&input, sizeof(struct student), 1, copy )){
         printf ("%s %d %d %d %s %d %d", input.Name,input.ID,input. BatchNo,input. Age,input.BloodGroup,input.Year,input.Semester);
-        fwrite (&input, sizeof(struct person), 1, past   );
+        fwrite (&input, sizeof(struct student), 1, past   );
     }
     
     fclose (copy);
