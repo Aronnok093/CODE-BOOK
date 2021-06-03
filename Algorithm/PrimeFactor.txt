@@ -13,7 +13,7 @@ void GP(){
             prime.push_back(i);
         for(int j=i*2;j<=maxi;j+=i){
             pop[j]=true;
-            pf[j]+=1;
+            pf[j]+=1;                     //j have prime factor i
             }
         }
     }
