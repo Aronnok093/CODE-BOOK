@@ -1,0 +1,11 @@
+ll solve(ll n, ll m){
+    ll ans=1;
+    while(m>0){
+        if(m%2==1){
+            ans=(ans*n)%mod;
+        }
+        n=(n*n)%mod;
+        m/=2;
+    }
+    return ans;
+}
