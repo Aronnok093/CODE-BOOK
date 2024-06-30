@@ -23,7 +23,7 @@ Graph Input(cost)  |[Open Source Code](https://github.com/Aronnok093/CODE-BOOK/b
 Remove Duplicate   |[Open Source Code](https://github.com/Aronnok093/CODE-BOOK/blob/master/Algorithm/set.cpp)
 sort using lamda fn|[Open Source Code](https://github.com/Aronnok093/CODE-BOOK/blob/master/Algorithm/sort%20using%20lamda.txt)
 String To Set      |[Open Source Code](https://github.com/Aronnok093/CODE-BOOK/blob/master/Algorithm/string%20to%20set.cpp)
-Subarray           |[Open Source Code]([https://github.com/Aronnok093/CODE-BOOK/blob/master/Algorithm/string%20to%20set.cpp](https://raw.githubusercontent.com/Aronnok093/CODE-BOOK/master/Algorithm/Subarray.txt))
+Subarray           |[Open Source Code](https://raw.githubusercontent.com/Aronnok093/CODE-BOOK/master/Algorithm/Subarray.txt)
 
 
 
