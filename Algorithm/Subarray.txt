@@ -1,0 +1,26 @@
+vector<vector<int> > subarrays(vector<int>arr){
+        vector< vector<int> > subarrays;
+
+        int sz = arr.size();
+        for(int i=0;i<sz;i++){
+            vector< int > subarray;
+            for(int j=i;j<sz;j++){
+                subarray.push_back(arr[j]);
+                subarrays.push_back(subarray);
+            }
+        }
+        return subarrays;
+
+}
+
+ll subarraysSum(vector<ll>arr){
+        ll cnmx =arr[0];
+        ll glmx =arr[0];
+        ll sz = arr.size();
+        for(ll i=1;i<sz;i++){
+            cnmx = max(arr[i],cnmx+arr[i]);
+            glmx = max(cnmx,glmx);
+        }
+        return glmx;
+
+}
